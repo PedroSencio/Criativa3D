@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="/static/img/logo.png" alt="">
+        </div>
+        <div id="logo-nome">
+            <div id="nome">Criativa 3D</div>
+            <div id="slogan">Imobiliária | Arquitetura | Contrução</div>
+        </div>
+        <div id="atendimento">
+            <div id="grid-atendimento">
+                <div id="localizador">
+                <img src="/static/img/local.png" alt="">
+                </div> 
+                <p>Atendemos em todo Brasil! </p> 
+            </div>
+            <div id="telefone">(11) 9 9999-9999</div>
+        </div>
+    </div>
+    <div id="content">
+        <h1>Não é sobre construir uma casa.</h1>
+        <h2>É sobre a experiência de viver bem.</h2>
+        <h3>Estamos aqui para te ajudar a realizar seu sonho de forma personalizada.</h3>
+        <label>Qual seu objetivo hoje?</label>
+        <div id="blocos">
+        <div id="bloco1" tabindex="0">
+            <div id="icon1">
+                <img src="/static/img/icone1.png" alt="">
+                <h3>QUERO COMPRAR OU CONSTRUIR</h3>
+                <p>Encontre a casa dos seus sonhos, ou construa uma.</p>
+            </div>
+        </div>
+        <div id="bloco2" tabindex="0">
+            <div id="icon2">
+                <img src="/static/img/coin.png" alt="">
+                <h3>QUERO VENDER MEU IMÓVEL</h3>
+                <p>Venda seu imóvel com segurança e agilidade.</p>
+            </div>
+        </div>
+    </div>
+    <div id="content2">
+        <h2>Por que escolher a Criativa 3D</h2>
+        <div id="box">
+            <div id="line">
+            </div>
+            
+        </div>
+        <div id="grid-line">
+            <div id="atendimento-box">
+                <img src="/static/img/atendimento.png" alt="">
+                <h3>Atendimento Personalizado</h3>
+                <p>Nossa equipe está pronta para entender suas necessidades e oferecer soluções sob medida.</p>
+            </div>
+            <div id="sonhos">
+                <img src="/static/img/sonho.png" alt="">
+                <h3>Realização de Sonhos</h3>
+                <p>Mais do que imóveis, ajudamos a transformar sonhos em realidade, criando espaços que refletem seu estilo de vida.</p>
+            </div>
+            <div id="experiencia">
+                <img src="/static/img/experiencia.png" alt="">
+                <h3>Experiência e Confiança</h3>
+                <p>Com anos de atuação no mercado, nossa reputação é construída sobre a confiança e satisfação dos nossos clientes.</p>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="footer-content">
+            <div id="footer-logo-section">
+                <div id="footer-logo">
+                    <img src="/static/img/logo.png" alt="Criativa 3D">
+                </div>
+                <h3 id="nome1">Criativa 3D</h3>
+                <p>Realizando sonhos através da experiência de viver bem.</p>
+            </div>
+            
+            <div id="footer-services">
+                <h4>Serviços</h4>
+                <ul>
+                    <li>Compra de Imóveis</li>
+                    <li>Construção</li>
+                    <li>Arquitetura</li>
+                    <li>Financiamento</li>
+                </ul>
+            </div>
+            
+            <div id="footer-company">
+                <h4>Empresa</h4>
+                <ul>
+                    <li>Indique e Ganhe</li>
+                    <li>Trabalhe Conosco</li>
+                    <li>Projeto Social</li>
+                </ul>
+            </div>
+            
+            <div id="footer-contact">
+                <h4>Contato</h4>
+                <p>📞 Fale com um Especialista</p>
+                <div id="whatsapp-btn">WhatsApp</div>
+            </div>
+        </div>
+        
+        <div id="footer-bottom">
+            <p>© 2025 Criativa 3D. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        // Intersection Observer para detectar quando content2 entra na tela
+        const content2 = document.getElementById('content2');
+        const atendimento = document.getElementById('atendimento-box');
+        const sonhos = document.getElementById('sonhos');
+        const experiencia = document.getElementById('experiencia');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Adiciona a classe que inicia a animação
+                    content2.classList.add('animate');
+                    atendimento.classList.add('fade-in');
+                    sonhos.classList.add('fade-in1');
+                    experiencia.classList.add('fade-in2');
+                    // Para de observar após a primeira vez
+                    observer.unobserve(content2);
+                }
+            });
+        }, {
+            threshold: 0.3 // Inicia quando 30% do content2 está visível
+        });
+
+        // Começa a observar o content2
+        observer.observe(content2);
+    </script>
+</body>
+</html>

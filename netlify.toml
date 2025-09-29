@@ -1,8 +1,0 @@
-[build]
-  command = "cp templates/index.html . && mkdir -p _site && cp index.html _site/ && cp -r static _site/"
-  publish = "_site"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200

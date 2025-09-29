@@ -3,140 +3,496 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link rel="stylesheet" href="/static/styles/index.css">
+    <title>Criativa 3D</title>
 </head>
 <body>
-    <div id="header">
-        <div id="logo">
-            <img src="/static/img/logo.png" alt="">
-        </div>
-        <div id="logo-nome">
-            <div id="nome">Criativa 3D</div>
-            <div id="slogan">Imobiliária | Arquitetura | Contrução</div>
-        </div>
-        <div id="atendimento">
-            <div id="grid-atendimento">
-                <div id="localizador">
-                <img src="/static/img/local.png" alt="">
-                </div> 
-                <p>Atendemos em todo Brasil! </p> 
+    <!-- VERSÃO MOBILE - Será mostrada apenas em dispositivos móveis -->
+    <div id="mobile-version" style="display: none;">
+        <div id="header-mobile">
+            <div id="logo-mobile">
+                <img src="/static/img/logo.png" alt="">
             </div>
-            <div id="telefone">(11) 9 9999-9999</div>
+            <div id="mobile-menu-btn">☰</div>
         </div>
-    </div>
-    <div id="content">
-        <h1>Não é sobre construir uma casa.</h1>
-        <h2>É sobre a experiência de viver bem.</h2>
-        <h3>Estamos aqui para te ajudar a realizar seu sonho de forma personalizada.</h3>
-        <label>Qual seu objetivo hoje?</label>
-        <div id="blocos">
-        <div id="bloco1" tabindex="0">
-            <div id="icon1">
-                <img src="/static/img/icone1.png" alt="">
-                <h3>QUERO COMPRAR OU CONSTRUIR</h3>
-                <p>Encontre a casa dos seus sonhos, ou construa uma.</p>
+        <div id="mobile-nav" style="display: none;">
+            <button>Sobre nós</button>
+            <button>Obras Concluídas</button>
+            <button>Serviços</button>
+            <button>Whatsapp</button>
+
+        </div>
+        <div id="mobile-content-1">
+            <img src="/static/img/C082---RND--LatDir--R01.jpg" alt="">
+            <div id="mobile-box-text">
+                <h1>Você sonha.</h1>
+                <h2>A gente transforma em realidade.</h2>
+                <button>Solicite orçamento</button>
             </div>
         </div>
-        <div id="bloco2" tabindex="0">
-            <div id="icon2">
-                <img src="/static/img/coin.png" alt="">
-                <h3>QUERO VENDER MEU IMÓVEL</h3>
-                <p>Venda seu imóvel com segurança e agilidade.</p>
-            </div>
-        </div>
-    </div>
-    <div id="content2">
-        <h2>Por que escolher a Criativa 3D</h2>
-        <div id="box">
-            <div id="line">
-            </div>
-            
-        </div>
-        <div id="grid-line">
-            <div id="atendimento-box">
-                <img src="/static/img/atendimento.png" alt="">
-                <h3>Atendimento Personalizado</h3>
-                <p>Nossa equipe está pronta para entender suas necessidades e oferecer soluções sob medida.</p>
-            </div>
-            <div id="sonhos">
-                <img src="/static/img/sonho.png" alt="">
-                <h3>Realização de Sonhos</h3>
-                <p>Mais do que imóveis, ajudamos a transformar sonhos em realidade, criando espaços que refletem seu estilo de vida.</p>
-            </div>
-            <div id="experiencia">
-                <img src="/static/img/experiencia.png" alt="">
-                <h3>Experiência e Confiança</h3>
-                <p>Com anos de atuação no mercado, nossa reputação é construída sobre a confiança e satisfação dos nossos clientes.</p>
-            </div>
-        </div>
-    </div>
-    <div id="bottom">
-        <div id="footer-content">
-            <div id="footer-logo-section">
-                <div id="footer-logo">
-                    <img src="/static/img/logo.png" alt="Criativa 3D">
+        <div id="mobile-content-2">
+            <h1>Alguns de nossos projetos</h1>
+            <div id="mobile-projetos">
+                <div id="line-projetos-mobile"></div>
+                <div id="mobile-carousel-container">
+                    <div id="mobile-carousel" class="carousel-track">
+                        <div class="carousel-slide active">
+                            <div class="gray-box"></div>
+                            <div class="slide-content">
+                                <h3>Projeto Residencial 1</h3>
+                                <p>Casa moderna com linhas contemporâneas</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="gray-box"></div>
+                            <div class="slide-content">
+                                <h3>Projeto Residencial 2</h3>
+                                <p>Arquitetura minimalista e funcional</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="gray-box"></div>
+                            <div class="slide-content">
+                                <h3>Projeto Comercial</h3>
+                                <p>Espaço comercial inovador</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="gray-box"></div>
+                            <div class="slide-content">
+                                <h3>Projeto Futuro</h3>
+                                <p>Em breve, mais projetos incríveis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                    </div>
                 </div>
-                <h3 id="nome1">Criativa 3D</h3>
-                <p>Realizando sonhos através da experiência de viver bem.</p>
-            </div>
-            
-            <div id="footer-services">
-                <h4>Serviços</h4>
-                <ul>
-                    <li>Compra de Imóveis</li>
-                    <li>Construção</li>
-                    <li>Arquitetura</li>
-                    <li>Financiamento</li>
-                </ul>
-            </div>
-            
-            <div id="footer-company">
-                <h4>Empresa</h4>
-                <ul>
-                    <li>Indique e Ganhe</li>
-                    <li>Trabalhe Conosco</li>
-                    <li>Projeto Social</li>
-                </ul>
-            </div>
-            
-            <div id="footer-contact">
-                <h4>Contato</h4>
-                <p>📞 Fale com um Especialista</p>
-                <div id="whatsapp-btn">WhatsApp</div>
             </div>
         </div>
-        
-        <div id="footer-bottom">
-            <p>© 2025 Criativa 3D. Todos os direitos reservados.</p>
+        <div id="sobre-nos-mobile">
+            <h1>Sobre nós</h1>
+            <div id="line-sobre-mobile"></div>
+            <div id="content-sobre-mobile">
+                <div id="text-sobre-mobile">
+                    <p>A Criativa 3D é uma empresa especializada em impressão 3D, prototipagem rápida e fabricação digital. Fundada em 2010, a empresa tem como missão transformar ideias em realidade através da tecnologia de impressão 3D, oferecendo soluções inovadoras e personalizadas para seus clientes.</p>
+                    <p>Com uma equipe altamente qualificada e equipamentos de última geração, a Criativa 3D atende a diversos setores, incluindo arquitetura, engenharia, design de produto, medicina e educação. A empresa se destaca pela qualidade de seus serviços, agilidade na entrega e atendimento personalizado.</p>
+                    <p>A Criativa 3D acredita no poder da inovação e está constantemente investindo em pesquisa e desenvolvimento para oferecer as melhores soluções em impressão 3D. Com um portfólio diversificado e uma base sólida de clientes satisfeitos, a empresa é referência no mercado de fabricação digital.</p>
+                </div>
+                <div id="img-sobre-mobile">
+                    <img src="/static/img/casa-moderna-linhas-retas.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="dif-mobile">
+            <h1>Por que nos escoher?</h1>
+            <div id="text-dif-mobile">
+                <h1>Atendimento Personalizado</h1>
+                <h2>Cada cliente é único e merece uma solução sob medida</h2>
+                <div id="mobile-counter-section">
+                    <span id="mobile-counter">0</span>
+                    <p>Projetos Concluídos</p>
+                </div>
+                <h1>Experiência Completa</h1>
+                <h2>Do projeto à entrega das chaves, cuidamos de tudo</h2>
+            </div>
+
+        </div>
+
+        <div id="ajuda-mobile">
+            <h1>Como podemos ajuda-lo hoje?</h1>
+            <div id="line-ajuda-mobile"></div>
+            <div id="boxes-1-mobile">
+                <div id="box1-mobile">
+                    <div id="img-mobile"></div>
+                    <div id="text-box-1-mobile">
+                        <h2>Quero comprar ou construir</h2>
+                        <p>Encontre a casa dos seus sonhos ou construa do zero</p>
+                        <button id="button-box">Clique aqui</button>
+                    </div>
+                </div>
+                <div id="box2-mobile">
+                    <div id="img-mobile"></div>
+                    <div id="text-box-2-mobile">
+                        <h2>Quero vender meu imóvel</h2>
+                        <p>Obtenha a melhor avaliação e venda com confiança</p>
+                        <button id="button-box">Clique aqui</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <!-- VERSÃO DESKTOP - Original -->
+    <div id="container">
+        <div id="header">
+            <div id="line-content">
+                <div id="logo">
+                    <img src="/static/img/logo.png" alt="">
+                </div>
+                <div id="menu">
+                    <button>Sobre nós</button>
+                    <button>Obras Concluídas</button>
+                    <button>Serviços</button>
+                    <button>Whatsapp</button>
+                </div>
+            </div>
+            <div id="line">
+
+            </div>
+        </div>
+        <div id="content-1">
+            <img src="/static/img/C082---RND--LatDir--R01.jpg" alt="">
+            <div id="box-text">
+                <h1>Você sonha.</h1>
+                <h2>A gente transforma em realidade.</h2>
+                <button>Solicite orçamento</button>
+        </div>
+    </div>
+    <div id="content-2">
+        <h1>Alguns de nossos projetos</h1>
+        <div id="projetos">
+            <div id="line-projetos">
+
+            </div>
+            <div id="boxes">
+                <div class="box">
+                </div>
+                <div class="box">
+                </div>
+                <div class="box">
+                </div>
+                <div class="box">
+                </div>
+            </div> <!-- Fecha #boxes -->
+        </div> <!-- Fecha #projetos -->
+    </div> <!-- Fecha #content-2 -->
+    <div id="content-3">
+        <h1>Sobre nós</h1>
+        <div id="line-sobre"></div>
+        <div id="content-sobre">
+            <div id="text-sobre">
+            <p>A Criativa 3D é uma empresa especializada em impressão 3D, prototipagem rápida e fabricação digital. Fundada em 2010, a empresa tem como missão transformar ideias em realidade através da tecnologia de impressão 3D, oferecendo soluções inovadoras e personalizadas para seus clientes.</p>
+            <p>Com uma equipe altamente qualificada e equipamentos de última geração, a Criativa 3D atende a diversos setores, incluindo arquitetura, engenharia, design de produto, medicina e educação. A empresa se destaca pela qualidade de seus serviços, agilidade na entrega e atendimento personalizado.</p>
+            <p>A Criativa 3D acredita no poder da inovação e está constantemente investindo em pesquisa e desenvolvimento para oferecer as melhores soluções em impressão 3D. Com um portfólio diversificado e uma base sólida de clientes satisfeitos, a empresa é referência no mercado de fabricação digital.</p>
+            </div>
+            <div id="img-sobre">
+                <img src="/static/img/casa-moderna-linhas-retas.jpg" alt="">
+            </div>
+        </div>    
+    </div>
+
+    <div id="content-4">
+        <h1>Onde estamos localizados</h1>
+        <div id="maps">
+            <img src="/static/img/Captura de Tela 2025-09-22 às 2.27.43 PM.png" alt="">
+        </div>
+
+    </div>
+
+    <div id="content-5">
+        <h1>Por que nos escoher?</h1>
+        <div id="dif">
+            <div id="text-dif">
+                <h1>Atendimento Personalizado</h1>
+                <h2>Cada cliente é único e merece uma solução sob medida</h2>
+                <div id="contador">
+                    <span id="counter-number">0</span>
+                    <p>Projetos Concluídos</p>
+                </div>
+                <h1>Experiência Completa</h1>
+                <h2>Do projeto à entrega das chaves, cuidamos de tudo</h2>
+            </div>
+            <div id="img-dif">
+                <img src="/static/img/5ddfe108-3eea-4625-b93a-35a14654353a.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="content-6">
+        <h1>Como podemos ajuda-lo hoje?</h1>
+        <div id="line-ajuda"></div>
+        <div id="boxes-1">
+            <div id="box1">
+                <div id="img"></div>
+                <div id="text-box-1">
+                    <h2>Quero comprar ou construir</h2>
+                    <p>Encontre a casa dos seus sonhos ou construa do zero</p>
+                    <button id="button-box">Clique aqui</button>
+                </div>
+            </div>
+            <div id="box2">
+                <div id="img"></div>
+                <div id="text-box-2">
+                    <h2>Quero vender meu imóvel</h2>
+                    <p>Obtenha a melhor avaliação e venda com confiança</p>
+                    <button id="button-box">Clique aqui</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
 
     <script>
-        // Intersection Observer para detectar quando content2 entra na tela
-        const content2 = document.getElementById('content2');
-        const atendimento = document.getElementById('atendimento-box');
-        const sonhos = document.getElementById('sonhos');
-        const experiencia = document.getElementById('experiencia');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Adiciona a classe que inicia a animação
-                    content2.classList.add('animate');
-                    atendimento.classList.add('fade-in');
-                    sonhos.classList.add('fade-in1');
-                    experiencia.classList.add('fade-in2');
-                    // Para de observar após a primeira vez
-                    observer.unobserve(content2);
-                }
-            });
-        }, {
-            threshold: 0.3 // Inicia quando 30% do content2 está visível
-        });
+        // Função para detectar se é mobile
+        function isMobile() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+        }
 
-        // Começa a observar o content2
-        observer.observe(content2);
+        // Função para mostrar versão correta
+        function showCorrectVersion() {
+            const mobileVersion = document.getElementById('mobile-version');
+            const desktopVersion = document.getElementById('container');
+            
+            if (isMobile()) {
+                console.log('Mobile detectado - mostrando versão mobile');
+                mobileVersion.style.display = 'block';
+                desktopVersion.style.display = 'none';
+                
+                // Configurar menu mobile
+                setupMobileMenu();
+                // Configurar contador mobile
+                setupMobileCounter();
+                // Configurar carrossel mobile
+                setupMobileCarousel();
+                
+            } else {
+                console.log('Desktop detectado - mostrando versão desktop');
+                mobileVersion.style.display = 'none';
+                desktopVersion.style.display = 'block';
+            }
+        }
+
+        // Configurar menu mobile
+        function setupMobileMenu() {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const nav = document.getElementById('mobile-nav');
+            
+            if (menuBtn && nav) {
+                menuBtn.addEventListener('click', function() {
+                    nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+                });
+            }
+        }
+
+        // Configurar contador mobile
+        function setupMobileCounter() {
+            function animateMobileCounter() {
+                const counterElement = document.getElementById('mobile-counter');
+                if (!counterElement) return;
+                
+                const targetNumber = 1000;
+                const duration = 3000;
+                const startTime = performance.now();
+                
+                function updateCounter(currentTime) {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                    const currentNumber = Math.floor(easeOutQuart * targetNumber);
+                    
+                    counterElement.textContent = currentNumber;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counterElement.textContent = targetNumber;
+                    }
+                }
+                
+                requestAnimationFrame(updateCounter);
+            }
+
+            // Observer para iniciar contador quando visível
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateMobileCounter();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const counterSection = document.getElementById('mobile-counter-section');
+            if (counterSection) {
+                observer.observe(counterSection);
+            }
+        }
+
+        // Configurar carrossel mobile
+        function setupMobileCarousel() {
+            const carousel = document.getElementById('mobile-carousel');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+
+            if (!carousel) return;
+
+            // Função para ir para um slide específico
+            function goToSlide(slideIndex) {
+                if (slideIndex < 0 || slideIndex >= slides.length) return;
+                
+                currentSlide = slideIndex;
+                const translateX = -slideIndex * 25; // 25% por slide
+                carousel.style.transform = `translateX(${translateX}%)`;
+                
+                // Atualizar dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === slideIndex);
+                });
+            }
+
+            // Função para próximo slide
+            function nextSlide() {
+                const next = currentSlide + 1;
+                goToSlide(next >= slides.length ? 0 : next);
+            }
+
+            // Função para slide anterior
+            function prevSlide() {
+                const prev = currentSlide - 1;
+                goToSlide(prev < 0 ? slides.length - 1 : prev);
+            }
+
+            // Event listeners para dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+
+            // Touch events para swipe
+            carousel.addEventListener('touchstart', handleTouchStart, { passive: true });
+            carousel.addEventListener('touchmove', handleTouchMove, { passive: false });
+            carousel.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+            // Mouse events para desktop (caso necessário)
+            carousel.addEventListener('mousedown', handleMouseStart);
+            carousel.addEventListener('mousemove', handleMouseMove);
+            carousel.addEventListener('mouseup', handleMouseEnd);
+            carousel.addEventListener('mouseleave', handleMouseEnd);
+
+            function handleTouchStart(e) {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            }
+
+            function handleTouchMove(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+                currentX = e.touches[0].clientX;
+            }
+
+            function handleTouchEnd() {
+                if (!isDragging) return;
+                isDragging = false;
+
+                const diffX = startX - currentX;
+                const threshold = 50; // Pixels mínimos para considerar swipe
+
+                if (Math.abs(diffX) > threshold) {
+                    if (diffX > 0) {
+                        nextSlide(); // Swipe left -> próximo
+                    } else {
+                        prevSlide(); // Swipe right -> anterior
+                    }
+                }
+            }
+
+            function handleMouseStart(e) {
+                startX = e.clientX;
+                isDragging = true;
+                e.preventDefault();
+            }
+
+            function handleMouseMove(e) {
+                if (!isDragging) return;
+                currentX = e.clientX;
+            }
+
+            function handleMouseEnd() {
+                if (!isDragging) return;
+                isDragging = false;
+
+                const diffX = startX - currentX;
+                const threshold = 50;
+
+                if (Math.abs(diffX) > threshold) {
+                    if (diffX > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                }
+            }
+
+            // Auto-play (opcional) - descomente se quiser
+            /*
+            setInterval(() => {
+                if (!isDragging) {
+                    nextSlide();
+                }
+            }, 5000); // Muda a cada 5 segundos
+            */
+
+            console.log('Carrossel mobile configurado com', slides.length, 'slides');
+        }
+
+        // Executar quando carregar
+        document.addEventListener('DOMContentLoaded', showCorrectVersion);
+    </script>
+
+    <script>
+        // Função para animar o contador
+        function animateCounter() {
+            const counterElement = document.getElementById('counter-number');
+            const targetNumber = 1000;
+            const duration = 3000; // 3 segundos para completar
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                
+                // Easing function para uma animação mais suave
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                const currentNumber = Math.floor(easeOutQuart * targetNumber);
+                
+                counterElement.textContent = currentNumber;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counterElement.textContent = targetNumber; // Garante que termine em 1000
+                }
+            }
+            requestAnimationFrame(updateCounter);
+        }
+        // Função para detectar quando o elemento entra na viewport
+        function createObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter();
+                        observer.unobserve(entry.target); // Para não repetir a animação
+                    }
+                });
+            }, {
+                threshold: 0.5 // Anima quando 50% do elemento está visível
+            });
+            const counterElement = document.getElementById('contador');
+            observer.observe(counterElement);
+        }
+        // Inicia o observer quando a página carrega
+        document.addEventListener('DOMContentLoaded', createObserver);
     </script>
 </body>
 </html>
